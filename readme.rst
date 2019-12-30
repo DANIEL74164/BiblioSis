@@ -1,70 +1,23 @@
-###################
-What is CodeIgniter
-###################
+ACERCA DEL SISTEMA DE BIBLIOTECA (SISBIBLIO)
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Este sistema de biblioteca, utiliza PHP, HTML, MYSQLi y jQuery. Adecuado bootstrap como marco frontal para tener un diseño agradable. El sistema puede tomar prestados y devolver libros en una transacción, y también puede rastrear los detalles de las transacciones de los estudiantes.
 
-*******************
-Release Information
-*******************
+COMO INSTALAR EL SISTEMA DE BIBLIOTECA
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+Primero descargamos los archivos del git y la base de datos con el nombre "sisbiblio", y lo extraemos dentro del "xampp / htdocs" . En el phpMyAdmin se crea una base de datos con el nombre "sisbiblio", para luego sincronizar el modelo. Una vez sincronizado importamos el archivo sisbiblio.sql al phpMyAdmin. Con eso ya tendriamos nuestra base de datos instalada.
 
-**************************
-Changelog and New Features
-**************************
+ACCESO COMO ADMINISTRADOR
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+Usuario: Andrew Contraseña: hola12
 
-*******************
-Server Requirements
-*******************
+EL GRUPO
 
-PHP version 5.6 or newer is recommended.
+Esta conformado por: DANIEL74164 - Daniel Condori Cama ANDREGH154 - Andre Flores Oquendo diego569 - Diego Romani Cotohuanca
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+LICENCIA
 
-************
-Installation
-************
+Por favor vea el acuerdo de licencia .
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+RECURSOS
 
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+Guía del usuario Traducciones de archivos de idioma Foros de la comunidad Wiki de la comunidad Canal flojo de la comunidad
