@@ -39,8 +39,8 @@
                                     <td><?php echo $ejem->area; ?></td>
                                     <td><?php echo $ejem->categoria; ?></td>
                                     <td>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Editar</button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i> Eliminar</button>
+                                        <a href=" <?= base_url().'Editar/CrearEjemplarPage' ?>" class="btn btn-primary btn-xs"> <i class="fa fa-pencil"></i> Editar</a>
+                                        <a href=" <?= base_url().'Editar/EliminarEjemplar/$ejem' ?>" class="btn btn-danger btn-xs"> <i class="fa fa-pencil"></i> Eliminar</a>
                                 </td>
                                  </tr>
                                  <?php } ?> 

@@ -54,8 +54,10 @@
             <!--logo end-->
            
             <div class="top-menu">
-            	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href=" <?= base_url().'Dashboard/logout' ?>">Cerrar sesion</a></li>
+            	<ul class="nav pull-right top-menu"> 
+                  <li>
+                    <a class="logout" href=" <?= base_url().'Dashboard/logout' ?>">Cerrar sesion</a>
+                  </li>
             	</ul>
             </div>
         </header>

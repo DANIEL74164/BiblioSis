@@ -25,7 +25,7 @@
 	  <div id="login-page">
 	  	<div class="container">
 	  	
-		      <form class="form-login" action="" method="post">
+		      <form class="form-login" action="<?= base_url() . 'Dashboard/login'; ?>" method="post">
 		        <h2 class="form-login-heading">Acceso al sistema</h2>
 		        <div class="login-wrap">
 
@@ -36,7 +36,7 @@
 		           
 		            <div class="checkbox pull-right">
                 		<input type="checkbox" name="checkbox" value="1">
-                		<label for="checkbox">Ingresar como administrador?</label>
+                		<label for="checkbox">¿Ingresar como administrador?</label>
             		</div>
 
 		            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> ENTRAR</button>

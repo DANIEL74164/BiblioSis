@@ -39,8 +39,8 @@
                             </tbody>
                           </table>         
                 </div>
-                <br>
-                        <h4 style="width: 77%;margin: 0 auto;">Libros mas prestados</h4>
+                <br><br>
+                        <h4 style="width: 77%;margin: 0 auto;">LIBROS MAS PRESTADOS</h4>
                         <br>
                        <div class="showback" style="width: 77%;margin: 0 auto;">
                                  <?php foreach ($vistag as $ejem){?>
