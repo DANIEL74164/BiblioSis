@@ -5,83 +5,94 @@
         <div class="row mt">
             <div class="col-md-12">
                 <div class="content-panel">
-                    <!--    
-                    <table class="table table-hover">
-                        
-                        <thead>
-                            <tr>
-                                <th>LIBRO</th>
-                                <!--
-                                <th><i class="fa fa-calendar"></i> FECHA</th>
-                                <th><i class=" fa fa-edit"></i> OBSERVACION</th>
-                                <th><i class=" fa fa-edit"></i> OPCIONES</th>
-                             
-                            </tr>
-                        </thead>
-                      
-                            <tbody>-->
-                              <table class="table table-hover">
-                              <?php 
-                              $prueba=1;
-                              foreach ($ejemplares as $tipo) { ?>
-                                
-                                  <thead>
-                                    <tr>
-                                      <th><?php echo "Area de ".$tipo->categoria ?></th>
-                                        
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        
-                                        <img src="<?php echo base_url().'data/'.$tipo->ejem_portada?>" alt="Image placeholder" class="card-img-top" height="132" width="93">
-                                      
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td><?php echo $tipo->ejem_titulo ?></td>
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                        <?php $prueba=$tipo->ejem_valoracion;
-                                          while ($prueba>0) {
-                                             echo '<i class=" fa fa-star"></i>';
-                                             $prueba-=1;
-                                           } ?>
-                                      </td>
-                                    </tr> 
-                                  </tbody>
-                                <?php
-                                
-                                if ($tipo->ejem_cate_id != $prueba) {
-                                  $prueba+=1;
-                                } 
+                  <table class="table table-hover">
+                    <tr>
+                      <td>
+                  <?php $tempcate=1; ?>
+                  <?php foreach ($area_1 as $key) {?>               
+                  <?php if ($tempcate==1) { ?>
+                  <h4><?php echo "Area de ".$key->categoria; ?></h4>
+                  <?php $tempcate+=1; } ?>
+                  <div class="card" style="width: 170px; float: left; text-align: center;">
+                    <br>
+                    <img src="<?php echo base_url().'data/'.$key->ejem_portada?>" class="card-img-top" alt="..." height="150" width="100">
+                    <div class="card-body">
+                      <h5 class="card-title"><?php echo $key->ejem_titulo; ?></h5>
+                      <p class="card-text"><?php $temp=$key->ejem_valoracion;
+                                    while ($temp>0) {
+                                        echo '<i class=" fa fa-star"></i>';
+                                        $temp-=1;
 
-                               } ?>
-                            </table>
+                                      } ?></p>
+                    </div>
+                  </div>
+                  <?php } ?>
+                  </td>
+                  </tr>
+                  </table>
 
+                  <!--area_2-->
+                  
+                  <table class="table table-hover">
+                    <tr>
+                      <td>
+                  <?php $tempcate=1; ?>
+                  <?php foreach ($area_2 as $key) {?>            
+                  <?php if ($tempcate==1) { ?>
+                  <h4><?php echo "Area de ".$key->categoria; ?></h4>
+                  <?php $tempcate+=1; } ?>
+                  <div class="card" style="width: 170px; float: left; text-align: center;">
+                    <br>
+                    <img src="<?php echo base_url().'data/'.$key->ejem_portada?>" class="card-img-top" alt="..." height="150" width="100">
+                    <div class="card-body">
+                      <h5 class="card-title"><?php echo $key->ejem_titulo; ?></h5>
+                      <p class="card-text"><?php $temp=$key->ejem_valoracion;
+                                    while ($temp>0) {
+                                        echo '<i class=" fa fa-star"></i>';
+                                        $temp-=1;
 
-                                <!--
+                                      } ?></p>
+                    </div>
+                  </div>
+                  <?php } ?>
+                  </td>
+                  </tr>
+                  </table>
 
-                                 <?php foreach ($ejemplares as $peticion){?>
-                                    <tr>
-                                      <td><?php echo $peticion->categoria ?></td>
-                                    <td><?php echo $peticion->ejem_titulo; ?></td>
-                                    <td><?php echo $peticion->ejem_valoracion;
-                                    ?></td>
-                                    <td>
-                                    <button class="btn btn-primary btn-xs">Prestar</button>
-                                    <button class="btn btn-danger btn-xs">Rechazar</button>
-                                </td>
-                                 </tr>
-                                 <?php } ?> 
-                              </tbody>
-                          </table>
+                  <!--Area_3-->
 
--->
+                  <table class="table table-hover">
+                    <tr>
+                      <td>
+                  <?php $tempcate=1; ?>
+                  <?php foreach ($area_3 as $key) {?>
+                               
+                  <?php if ($tempcate==1) { ?>
+                  <h4><?php echo "Area de ".$key->categoria; ?></h4>
+                  <?php $tempcate+=1; } ?>
+                  <div class="card" style="width: 170px; float: left; text-align: center;">
+                    <br>
+                    <img src="<?php echo base_url().'data/'.$key->ejem_portada?>" class="card-img-top" alt="..." height="150" width="100">
+                    <div class="card-body">
+                      <h5 class="card-title"><?php echo $key->ejem_titulo; ?></h5>
+                      <p class="card-text"><?php $temp=$key->ejem_valoracion;
+                                    while ($temp>0) {
+                                        echo '<i class=" fa fa-star"></i>';
+                                        $temp-=1;
 
-                      </div>
+                                      } ?></p>
+                    </div>
+                  <!--
+                  <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                    -->
+                  </div>
+                  <?php } ?>
+                  </td>
+                  </tr>
+                  </table>
+                  </div>
                   </div>
               </div>
     </section>

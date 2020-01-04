@@ -15,5 +15,33 @@ class Portada_model extends CI_Model
 		$resultados = $this->db->get();
 		return $resultados->result();
 	}
+
+	public function getEjemplarArea_1()
+	{
+		$this->db->select("e.*,c.cate_nombre as categoria");
+		$this->db->from("ejemplar e");
+		$this->db->join("categoria c","e.ejem_cate_id = c.cate_id");
+		$this->db->where("ejem_cate_id","1");
+		$resultados = $this->db->get();
+		return $resultados->result();
+	}
+	public function getEjemplarArea_2()
+	{
+		$this->db->select("e.*,c.cate_nombre as categoria");
+		$this->db->from("ejemplar e");
+		$this->db->join("categoria c","e.ejem_cate_id = c.cate_id");
+		$this->db->where("ejem_cate_id","2");
+		$resultados = $this->db->get();
+		return $resultados->result();
+	}
+	public function getEjemplarArea_3()
+	{
+		$this->db->select("e.*,c.cate_nombre as categoria");
+		$this->db->from("ejemplar e");
+		$this->db->join("categoria c","e.ejem_cate_id = c.cate_id");
+		$this->db->where("ejem_cate_id","3");
+		$resultados = $this->db->get();
+		return $resultados->result();
+	}
 }
 ?>

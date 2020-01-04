@@ -14,7 +14,10 @@
 		{
 			if ($_SESSION['usua_nombres']) {
 				$data = array(
-				'ejemplares' => $this->Portada_model->getEjemplarArea()
+				'ejemplares' => $this->Portada_model->getEjemplarArea(),
+				'area_1' => $this->Portada_model->getEjemplarArea_1(),
+				'area_2' => $this->Portada_model->getEjemplarArea_2(),
+				'area_3' => $this->Portada_model->getEjemplarArea_3()
 			);
 			$this->load->view("includes/header");
 			$this->load->view("includes/sidebar_user");
