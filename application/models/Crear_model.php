@@ -16,7 +16,11 @@ class Crear_model extends CI_Model
 	{
 		return $this->db->insert('autor',$datosautor);
 	}
-	public function insertDias($ejemplar)
+	public function insertDias($n_dias)
+	{	
+		$this->db->insert("peticion",$n_dias);
+	}
+	public function insertFavorito($ejemplar)
 	{	
 		$this->db->insert("favorito",$ejemplar);
 	}

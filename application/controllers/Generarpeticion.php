@@ -74,7 +74,7 @@
                 'favo_ejem_id' => $ejemplar,
                 //'peti_fechareg' => $fecha
             	];
-            	$insert_dias = $this->Crear_model->insertDias($dias);
+            	$insert_dias = $this->Crear_model->insertFavorito($dias);
             	
                 //$dato = array(
                 //'seleccion_busqueda' => $this->Busqueda_model->selectBusqueda($Busqueda),
