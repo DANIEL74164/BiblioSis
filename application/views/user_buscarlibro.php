@@ -1,12 +1,12 @@
 <section id="main-content">
     <section class="wrapper">
       <h2>BUSQUEDA</h2>
-      <hr>
+      
       <div class="form-panel">
 
         <table class="table tabla-hover">
           <form action="<?= base_url(); ?>BuscarLibro/BusquedaLibros" method="post">
-          <tr>
+          <tr style="border: 1px solid #CDD2D1 ">
             <td>
               <div class="form-group" style="width: 100%;">
                   <select class="form-control" name="categoria">

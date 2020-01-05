@@ -23,8 +23,8 @@ class Dashboard extends CI_Controller {
 					//"usua_codigo"=>$login[0]->usua_codigo,
 					"usua_nombres"=>$login[0]->usua_nombres,
 					"usua_apellidos"=>$login[0]->usua_apellidos,
-					"usua_esadmin"=>$login[0]->usua_esadmin
-					//"usua_email"=>$login[0]->usua_email,
+					"usua_esadmin"=>$login[0]->usua_esadmin,
+					"usua_id"=>$login[0]->usua_id
 					//"usua_telefono"=>$login[0]->usua_telefono
 					);
 					$this->session->set_userdata($array);
@@ -41,7 +41,7 @@ class Dashboard extends CI_Controller {
 					//"usua_codigo"=>$login[0]->usua_codigo,
 					"usua_nombres"=>$login[0]->usua_nombres,
 					"usua_apellidos"=>$login[0]->usua_apellidos,
-					//"usua_esadmin"=>$login[0]->usua_esadmin
+					"usua_id"=>$login[0]->usua_id
 					//"usua_email"=>$login[0]->usua_email,
 					//"usua_telefono"=>$login[0]->usua_telefono
 				);

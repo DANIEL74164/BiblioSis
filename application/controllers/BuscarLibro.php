@@ -59,54 +59,5 @@
 			}
 		}
 
-
-		/*
-		public function CrearEjemplar()
-		{
-			if ($_SESSION['usua_nombres']) {
-				
-				$titulo = $this->input->post('titulo');
-				$autor = $this->input->post('autor');
-            	$editorial = $this->input->post('editorial');
-            	$paginas = $this->input->post('paginas');
-            	$isbn = $this->input->post('isbn');
-            	$idioma = $this->input->post('idioma');
-            	$portada = $this->input->post('portada');
-            	$resumen = $this->input->post('resumen');
-            	$tipo = $this->input->post('tipo');
-            	$categoria = $this->input->post('categoria');
-            	$date = $this->input->post('date');
-
-            	$data = [
-                'ejem_titulo' => $titulo,
-                'ejem_editorial' => $editorial,
-                'ejem_paginas' => $paginas,
-                'ejem_isbn' => $isbn,
-                'ejem_idioma' => $idioma,
-                'ejem_portada' => $portada,
-                'ejem_resumen' => $resumen,
-                'ejem_tipo_id' => $tipo,
-                'ejem_cate_id' => $categoria,
-                'ejem_anio' => $date
-            	];
-            	$insert_data = $this->Crear_model->CrearEjem($data);
-            	if ($insert_data) {
-
-            		$autor = $this->input->post('autor');
-            		$dato = [
-                		'rela_auto_id' => $autor,
-                		'rela_ejem_id' => $this->db->insert_id()
-            		];
-            		$insert_autor = $this->Crear_model->CrearAutor($dato);
-
-                	redirect(base_url()."Ejemplares");
-            	}
-			}else{
-				redirect(base_url()."Dashboard/login","location");
-			}
-		}
-		*/
-
-
 	}
 ?>

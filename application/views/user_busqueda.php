@@ -1,13 +1,14 @@
 <section id="main-content">
     <section class="wrapper">
       <h2>BUSQUEDA</h2>
-      <hr>
+      
       <div class="form-panel">
 
         <table class="table tabla-hover">
           <form action="<?= base_url(); ?>BuscarLibro/BusquedaLibros" method="post">
-          <tr>
+          <tr style="border: 1px solid #CDD2D1 ">
             <td>
+              <br>
               <div class="form-group" style="width: 100%;">
                   <select class="form-control" name="categoria">
                     <?php foreach ($seleccioncategoria as $Categoria) { ?>
@@ -21,15 +22,18 @@
                 </div>
             </td>
             <td>
+              <br>
               <input style="width: 100%;" id="buscar" type="text" class="form-control" placeholder="Buscar" name="titulo">
             </td>
             <td>
+              <br>
               <button type="submit" class="btn btn-primary">Buscar Libro</button>
             </td>
           </tr>
         </form>
         </table>
         
+        <strong>Resultado de busqueda del libro </strong>
 
 
         <table class="table tabla-hover">
@@ -41,18 +45,73 @@
               <?php
               echo "</td>";
               echo "<td>";
-              echo $key->ejem_titulo;
-              echo "<br>";
-              echo $key->autor_nom;
+              echo "<strong>".$key->ejem_titulo."</strong>";
+              echo "<br><br>".$key->autor_nom;
               echo " ".$key->autor_apell;
-              echo "<br> ".$key->ejem_resumen;
+              echo "<br><br>".$key->ejem_resumen;
               echo "</td>";
               echo "<td>";
               ?>
-              <a href=" <?= base_url().'Editar/CrearEjemplarPage' ?>" class="btn btn-primary btn-xs"> <i class="fa fa-star"></i> Favorito</a>
-              <a href=" <?= base_url().'Editar/EliminarEjemplar/$ejem' ?>" class="btn btn-danger btn-xs"> <i class="fa fa-pencil"></i> Generar peticion</a>
+              <a style="width: 100%;" href="<?= base_url(); ?>Generarpeticion/Favorito/<?= $key->ejem_id; ?>" class="btn btn-primary btn"><i class="fa fa-star"></i> Favorito</a>
+              <p><br></p>
+                <!--incio generar peticion-->
+                 
+              <button style="width: 100%;" class="btn btn-success" data-toggle="modal" data-target="#peticion">
+                Generar peticion
+                </button>
+              <!-- Modal -->
+              <div class="modal fade" id="peticion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                      <h4 class="modal-title" id="myModalLabel">Generar peticion</h4>
+                    </div>
+                    <div class="modal-body">
 
-              <p class="card-text">Valoracion 
+                      <form action="<?= base_url(); ?>Generarpeticion/Generar/<?= $key->ejem_id; ?>" method="post">
+                      <table class="table" style="border: hidden;">
+                        <tr>
+                          <td style="width: 130px;text-align: center;">
+                            <img src="<?php echo base_url().'data/'.$key->ejem_portada?>" class="card-img-top" alt="..." height="150" width="100">
+                          </td>
+                          <td>
+                            <?php 
+                            echo "<strong>".$key->ejem_titulo."</strong>"; 
+                            echo "<br><br>".$key->autor_nom;
+                            echo " ".$key->autor_apell;
+                            echo "<br><br>".$key->ejem_resumen;
+                            ?>
+                            <p class="card-text"><br>Valoracion: 
+                            <?php $temp=$key->ejem_valoracion;
+                              while ($temp>0) {
+                                echo '<i class=" fa fa-star"></i>';
+                                $temp-=1;
+                            } ?>                       
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>Dias de prestamo:</label>
+                            <input style="width: 100%;" type="number" class="form-control" placeholder="N° de dias" name="dias">
+                          </td>
+                        </tr>
+                      </table>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                      <button type="submit" class="btn btn-primary">Generar peticion</button>
+                    </div>
+                  </div>
+                </form>
+                </div>
+              </div>
+
+                <!--final generar peticion-->
+
+              <p class="card-text"><br>Valoracion: 
                 <?php $temp=$key->ejem_valoracion;
                   while ($temp>0) {
                       echo '<i class=" fa fa-star"></i>';
