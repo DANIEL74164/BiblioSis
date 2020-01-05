@@ -53,7 +53,7 @@ class Editar extends CI_Controller{
           if($eliminar==true){
               $this->load->view("includes/header");
               $this->load->view("includes/sidebar");
-              $this->load->view("admin_ejemplares");
+              $this->load->view("admin_autores");
               $this->load->view("includes/footer");
           }
         }

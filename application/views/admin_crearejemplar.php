@@ -6,7 +6,7 @@
 
               <form action="<?= base_url(); ?>Crear/CrearEjemplar" method="post">
 
-                      <div class="form-group">
+                <div class="form-group">
                   <label for="">TITULO</label>
                   <input type="text" class="form-control" name="titulo">
                 </div>

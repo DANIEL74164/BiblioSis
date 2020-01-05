@@ -36,8 +36,8 @@
                                     ?></td>
                                     <td><?php echo $autor->auto_biografia; ?></td>
                                     <td>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Editar</button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i> Eliminar</button>
+                                    <button class="btn btn-primary btn-xs" href="<?= base_url("EditarEliminar/Editarautor")?>"><i class="fa fa-pencil"></i>Editar</button>
+                                    <button class="btn btn-danger btn-xs" href="<?= base_url("EditarEliminar/Eliminarautor")?>" ><i class="fa fa-trash-o "></i>Eliminar</button>
                                 </td>
                                  </tr>
                                  <?php } ?> 
