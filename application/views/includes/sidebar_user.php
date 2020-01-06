@@ -37,7 +37,7 @@
                       </a>
                   </li>
                   <li>
-                      <a href="<?= base_url()?>Favoritos">
+                      <a href="<?= base_url()?>Generarpeticion/GenerarFavoritos">
                           <i class="fa fa-book"></i>
                           <span>MIS LIBROS FAVORITOS</span>
                       </a>
