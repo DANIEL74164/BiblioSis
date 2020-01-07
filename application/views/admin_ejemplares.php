@@ -20,6 +20,7 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
+                                <th><i class="fa fa-book"></i> N°</th>
                                 <th><i class="fa fa-book"></i> TITULO</th>
                                 <th class="hidden-phone"><i class="fa fa-user"></i> AUTOR</th>
                                 <th><i class="fa fa-book"></i> AREA</th>
@@ -30,6 +31,7 @@
                             <tbody id="ejemplar">
                                  <?php foreach ($ejemplares as $ejem){?>
                                     <tr>
+                                    <td><?php echo $ejem->ejem_id; ?></td>
                                     <td><?php echo $ejem->ejem_titulo; ?></td>
                                     <td><?php 
                                     echo $ejem->autor_nom;
@@ -39,8 +41,8 @@
                                     <td><?php echo $ejem->area; ?></td>
                                     <td><?php echo $ejem->categoria; ?></td>
                                     <td>
-                                        <a href=" <?= base_url().'Editar/CrearEjemplarPage' ?>" class="btn btn-primary btn-xs"> <i class="fa fa-pencil"></i> Editar</a>
-                                        <a href=" <?= base_url().'Editar/EliminarEjemplar/$ejem' ?>" class="btn btn-danger btn-xs"> <i class="fa fa-pencil"></i> Eliminar</a>
+                                        <a href=" <?= base_url().'Editar/EditarEjemplar' ?>" class="btn btn-primary btn-xs"> <i class="fa fa-pencil"></i> Editar</a>
+                                        <a href=" <?= base_url().'Editar/EliminarEjem/' ?>" class="btn btn-danger btn-xs"> <i class="fa fa-pencil"></i> Eliminar</a>
                                 </td>
                                  </tr>
                                  <?php } ?> 

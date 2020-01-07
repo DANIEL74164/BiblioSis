@@ -14,7 +14,6 @@ class Admin_datos extends CI_Model
 
 
 	public function loginAdmin(){
-
 			$this->db->select("*");
 			$this->db->from("usuario");
 			$this->db->where("usua_login",$data['username']);

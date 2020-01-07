@@ -28,7 +28,7 @@
 		      <form class="form-login" action="<?= base_url() . 'Dashboard/login'; ?>" method="post">
 		        <h2 class="form-login-heading">Acceso al sistema</h2>
 		        <div class="login-wrap">
-
+		        	
 
 		            <input name="username" type="text" class="form-control" placeholder="Usuario" autofocus>
 		            <br>
@@ -48,7 +48,7 @@
 		            <p>Para poder utilizar el sistema de biblioteca es necesario ser estudiante de la Universidad Nacional del Altiplano - Puno.</p>
 		            <p>Favor de registrarse en el siguiente formulario.</p>
 		            <br/>
-		                <span><a href="<?= base_url() . 'register'; ?>" class="btn btn-theme btn-block">Registrarse</a></span>
+		                <span><a href="<?= base_url() . 'Register'; ?>" class="btn btn-theme btn-block">Registrarse</a></span>
 		            </div>
 		
 		        </div>
