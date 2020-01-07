@@ -1,15 +1,39 @@
 <section id="main-content">
     <section class="wrapper">
-      <h2>REGISTRAR EJEMPLAR</h2>
-      <hr>
+      <h2>BUSQUEDA</h2>
+      
       <div class="form-panel">
 
-              <form action="<?= base_url(); ?>Crear/CrearEjemplar" method="post">
-
-                <div class="form-group">
-                  <label for="">TITULO</label>
-                  <input type="text" class="form-control" name="titulo">
+        <table class="table tabla-hover">
+          <form action="<?= base_url(); ?>BuscarLibro/BusquedaLibros" method="post">
+          <tr style="border: 1px solid #CDD2D1 ">
+            <td>
+              <div class="form-group" style="width: 100%;">
+                  <select class="form-control" name="categoria">
+                    <?php foreach ($seleccioncategoria as $Categoria) { ?>
+                      <option>
+                        <?php echo $Categoria->cate_id; ?>
+                        <?php echo "."; ?>
+                        <?php echo $Categoria->cate_nombre; ?>
+                      </option>
+                    <?php } ?>
+                  </select>
                 </div>
+            </td>
+            <td>
+              <input style="width: 100%;" id="buscar" type="text" class="form-control" placeholder="Buscar" name="titulo">
+            </td>
+            <td>
+              <button type="submit" class="btn btn-primary">Buscar Libro</button>
+            </td>
+          </tr>
+        </form>
+        </table>
+
+
+        <!--
+
+              <form action="<?= base_url(); ?>Crear/CrearEjemplar" method="post">
 
                 <div class="form-group" style="width: 50%;">
                   <label for="">AUTOR</label>
@@ -24,32 +48,7 @@
                     <?php } ?>
                   </select>
                 </div>
-                <div class="form-group">
-                  <label for="">EDITORIAL</label>
-                  <input type="text" class="form-control" name="editorial">
-                </div>
-                <div class="form-group">
-                  <label for="">NUMERO DE PAGINAS</label>
-                  <input type="number" class="form-control" name="paginas">
-                </div>
-                <div class="form-group">
-                  <label for="">ISBN</label>
-                  <input type="number" class="form-control" name="isbn">
-                </div>
-                <div class="form-group">
-                  <label for="">IDIOMA</label>
-                  <input type="text" class="form-control" name="idioma">
-                </div>
-                    </td>
-                    <td>
-                      <div class="form-group">
-                  <label for="">PORTADA</label>
-                  <input type="text" class="form-control" name="portada" placeholder=" JPG, PNG">
-                </div>
-                <div class="form-group">
-                  <label for="">RESUMEN</label>
-                  <input type="textarea" class="form-control" name="resumen" placeholder="breve resumen del libro">
-                </div>
+  
 
                 <div class="form-group" style="width: 50%;">
                   <label for="">TIPO</label>
@@ -76,23 +75,18 @@
                     <?php } ?>
                   </select>
                 </div>
-
-                <div class="form-group" style="width: 50%;">
-                  <label for="">AÑO</label>
-                  <input type="text" class="form-control" name="date" placeholder="Año de publicacion">
-                </div>
-
                     </td>
                   </tr>
                   <tr>
                     <td colspan="2">
-                      <button type="submit" class="btn btn-primary">Registrar Ejemplar</button>
+                      <input style="width: 30%;" id="buscar" type="text" class="form-control" placeholder="Buscar">
+                      <button type="submit" class="btn btn-primary">Buscar</button>
                     </td>
                   </tr>
 
                 </table>
               </form>
-                <!--
+                
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">archivo</label>
@@ -100,8 +94,9 @@
                     <input type="file" name="imagen" class="form-control">
                   </div>
                 </div>
-               -->
+               
               </form>
+            -->
             </div>
     </section>
 </section>
