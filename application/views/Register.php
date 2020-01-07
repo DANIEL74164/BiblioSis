@@ -51,14 +51,17 @@
                   <label for="">CODIGO DE ESTUDIANTE: </label>
                   <input type="text" class="form-control" name="codigo" >
                 </div>
-
+                <div class="form-group" >
+                  <label for="">USUARIO</label>
+                  <input type="text" class="form-control" name="usuario" >
+                </div>
                 <div class="form-group" >
                   <label for="">NOMBRES</label>
                   <input type="text" class="form-control" name="nombres" >
                 </div>
                 <div class="form-group">
                   <label for="">APELLIDOS</label>
-                  <input type="text" class="form-control" name="apelliods">
+                  <input type="text" class="form-control" name="apellidos">
                 </div>
                 <div class="form-group">
                   <label for="">DIRECCION</label>
@@ -66,11 +69,11 @@
                 </div>
                 <div class="form-group">
                   <label for="">CONTRASEÑA</label>
-                  <input type="text" class="form-control" name="password">
+                  <input type="password" class="form-control" name="password">
                 </div>
                 <div class="form-group">
                   <label for="">CONFIRMAR</label>
-                  <input type="text" class="form-control">
+                  <input type="password" class="form-control">
                 </div>
                 <div class="form-group">
                   <label for="">EMAIL</label>
