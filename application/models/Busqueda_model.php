@@ -28,5 +28,17 @@ class Busqueda_model extends CI_Model
 		$resultados = $this->db->get();
 		return $resultados->result();
 	}
+	public function insertHistorial($historial)
+	{	
+		$this->db->insert("historial",$historial);
+	}
+	public function getHistorial($user_historial)
+	{	
+		$this->db->select("*");
+		$this->db->from("historial");
+		$this->db->where("histo_usua_id",$user_historial['histo_usua_id']);
+		$resultados = $this->db->get();
+		return $resultados->result();
+	}
 }
 ?>

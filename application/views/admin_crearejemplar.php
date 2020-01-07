@@ -91,16 +91,7 @@
                   </tr>
 
                 </table>
-              </form>
-                <!--
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">archivo</label>
-                  <div class="col-sm-10">
-                    <input type="file" name="imagen" class="form-control">
-                  </div>
-                </div>
-               -->
+                </form>
               </form>
             </div>
     </section>

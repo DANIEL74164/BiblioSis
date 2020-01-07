@@ -7,7 +7,6 @@
 		public function __construct()
 		{
 			parent::__construct();
-			//$this->load->model("Prestamo_model");
 		}
 
 		public function index()

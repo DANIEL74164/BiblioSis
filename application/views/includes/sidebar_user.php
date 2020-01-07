@@ -43,7 +43,7 @@
                       </a>
                   </li>
                   <li>
-                      <a href="<?= base_url()?>Historial">
+                      <a href="<?= base_url()?>BuscarLibro/HistorialBusqueda">
                           <i class="fa fa-book"></i>
                           <span>HISTORIAL DE BUSQUEDAS</span>
                       </a>

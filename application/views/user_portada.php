@@ -82,11 +82,7 @@
 
                                       } ?></p>
                     </div>
-                  <!--
-                  <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                  </div>
-                    -->
+                
                   </div>
                   <?php } ?>
                   </td>

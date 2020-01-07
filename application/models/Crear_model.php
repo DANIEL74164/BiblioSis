@@ -24,5 +24,17 @@ class Crear_model extends CI_Model
 	{	
 		$this->db->insert("favorito",$ejemplar);
 	}
+	public function EliminarFavorito($ejemplar)
+	{	
+		$this->db->delete("favorito",$ejemplar);
+		$this->db->where("favo_usua_id",$usuario);
+		$this->db->where("favo_ejem_id",$ejemplar);
+	}
+	public function EliminarHistorial($ejemplar)
+	{	
+		$this->db->delete("historial",$ejemplar);
+		//$this->db->where("favo_usua_id",$usuario);
+		$this->db->where("histo_id",$ejemplar);
+	}
 }
 ?>

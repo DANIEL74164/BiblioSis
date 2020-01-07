@@ -1,6 +1,6 @@
 <section id="main-content">
     <section class="wrapper">
-        <h2>LIBROS PRESTADOS</h2>
+        <h2>LIBROS FAVORITOS</h2>
         <hr>
         <div class="row mt">
             <div class="col-md-12">
@@ -21,12 +21,8 @@
                       echo "<br><br>".$value->RESUMEN;
                       echo "</td>";
                       echo "<td>";
-                      echo "Estado: ";
-                      echo "Devolucion: ";
-                      echo "</td>";
-                      echo "<td>";
                     ?>
-                      <a style="width: 100%;" href="<?= base_url(); ?>Generarpeticion/Favorito" class="btn btn-success btn"> Cancelar peiticion</a>
+                      <a style="width: 100%;" href="<?= base_url(); ?>Generarpeticion/EliminarFavorito/<?= $value->favo_ejem_id; ?>" class="btn btn-danger btn"><i class="fa fa-trash-o"></i> Eliminar Favorito</a>
                     <?php
                       echo "</td>";
                       echo "</tr>";

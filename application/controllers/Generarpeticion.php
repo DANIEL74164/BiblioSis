@@ -14,7 +14,6 @@
 		public function Generar($key){
 			if ($_SESSION['usua_nombres']) {
 
-				//$ = $this->input->post('titulo');
 				$n_dias = $this->input->post('dias');
             	$usuario = $_SESSION['usua_id'];
             	$ejemplar = $key;
@@ -53,6 +52,25 @@
 			}
 		}
 
+		public function EliminarFavorito($value){
+			if ($_SESSION['usua_nombres']) {
+
+            	$usuario = $_SESSION['usua_id'];
+            	$ejemplar = $value;
+
+				$dias = [
+                'favo_usua_id' => $usuario,
+                'favo_ejem_id' => $ejemplar,
+            	];
+
+            	$insert_dias = $this->Crear_model->EliminarFavorito($dias);
+
+                redirect(base_url()."Generarpeticion/GenerarFavoritos","location");
+			}else{
+				redirect(base_url()."Dashboard/login","location");
+			}
+		}
+
 		public function GenerarFavoritos(){
 			if ($_SESSION['usua_nombres']) {
 
@@ -70,6 +88,23 @@
 				$this->load->view("includes/sidebar_user");
 				$this->load->view("user_favoritos",$dato);
 				$this->load->view("includes/footer");
+			}else{
+				redirect(base_url()."Dashboard/login","location");
+			}
+		}
+
+		public function EliminarHistorial($value){
+			if ($_SESSION['usua_nombres']) {
+
+            	$ejemplar = $value;
+
+				$dias = [
+                'histo_id' => $ejemplar,
+            	];
+
+            	$insert_dias = $this->Crear_model->EliminarHistorial($dias);
+
+                redirect(base_url()."BuscarLibro/HistorialBusqueda","location");
 			}else{
 				redirect(base_url()."Dashboard/login","location");
 			}
