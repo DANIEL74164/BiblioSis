@@ -47,6 +47,9 @@ class Editar extends CI_Controller{
         }
     }
     */
+    public function EditarEjemplar($POST){
+      
+    }
     public function EliminarEjemplar($id){
         if(is_numeric($id)){
           $eliminar=$this->EditarEliminar_model->EliminarEjm($id);
