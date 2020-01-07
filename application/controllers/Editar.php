@@ -47,19 +47,21 @@ class Editar extends CI_Controller{
         }
     }
     */
-    public function EditarEjemplar($POST){
-      
+    public function EditarEjemplar($id){
+           
+      $this->load->view("includes/header");
+      $this->load->view("includes/sidebar");
+      $this->load->view("admin_editar_ejemplar",$data);
+      $this->load->view("includes/footer");
+       $data = array(
+        'datosejem' => $this->EditarEliminar_model->getEjemDatos()
     }
-    public function EliminarEjemplar($id){
+
+    public function EliminarEjem($id){
         if(is_numeric($id)){
-          $eliminar=$this->EditarEliminar_model->EliminarEjm($id);
-          if($eliminar==true){
-              $this->load->view("includes/header");
-              $this->load->view("includes/sidebar");
-              $this->load->view("admin_autores");
-              $this->load->view("includes/footer");
-          }
-        }
+          $eliminar=$this->EditarEliminar_model->Eliminarejem($id);
+          
+          redirect(base_url() . 'dashboard/admin_ejemplares');        }
     }
 }
 ?>

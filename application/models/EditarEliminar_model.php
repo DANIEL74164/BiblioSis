@@ -28,9 +28,21 @@ class EditarEliminar_model extends CI_Model{
         }
     }
     */
-     
+      public function getEjemDatos($id)
+  {
+    $this->db->select("*");
+    $this->db->from("ejemplares");
+    $resultados = $this->db->get();
+    return $resultados->result();
+    $this->db->UPDATE("*");
+    $this->db->from("ejemplares");
+    $this->db->WHERE("ejem_id",$id);
+    $result= $this->db->get();
+    return $result->result();
+  }
+     }
     public function Eliminarautor($id){
-       $consulta=$this->db->query("DELETE FROM autor WHERE auto_id=$id");
+       $consulta=$this->db->query("DELETE FROM ejemplares WHERE ejem_id=$id");
        if($consulta==true){
            return true;
        }else{
