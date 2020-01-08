@@ -21,14 +21,14 @@
                       echo " ".$value->autorApellido;
                       echo "<br><br>".$value->RESUMEN;
                       echo "</td>";
-                      echo "<td style='width:270px;'>";
+                      echo "<td style='width:170px;'>";
                       echo "<br>Estado: <br> Pendiente";
                     ?>
                     <?php
                       echo "</td>";
                       echo "<td>";
                     ?>
-                    <a href="<?= base_url(); ?>EditarPeticion/EliminarPeticionUser/<?= $id=$value->peti_id; ?>" class="btn btn-danger btn"> rechazar</a>
+                    <a href="<?= base_url(); ?>EditarPeticion/EliminarPeticionUser/<?= $id=$value->peti_id; ?>" class="btn btn-danger btn">Cancelar peticion</a>
                     <?php
                       echo "</td>";
                       echo "</tr>";
