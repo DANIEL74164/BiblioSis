@@ -20,7 +20,6 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th><i class="fa fa-book"></i> N°</th>
                                 <th><i class="fa fa-book"></i> TITULO</th>
                                 <th class="hidden-phone"><i class="fa fa-user"></i> AUTOR</th>
                                 <th><i class="fa fa-book"></i> AREA</th>
@@ -31,7 +30,6 @@
                             <tbody id="ejemplar">
                                  <?php foreach ($ejemplares as $ejem){?>
                                     <tr>
-                                    <td><?php echo $ejem->ejem_id; ?></td>
                                     <td><?php echo $ejem->ejem_titulo; ?></td>
                                     <td><?php 
                                     echo $ejem->autor_nom;

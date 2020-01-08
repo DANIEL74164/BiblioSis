@@ -4,10 +4,11 @@
 class Admin_datos extends CI_Model
 {
 	
-	public function getAdminDatos()
+	public function getAdminDatos($nombre)
 	{
 		$this->db->select("*");
 		$this->db->from("usuario");
+		$this->db->where("usua_id",$nombre);
 		$resultados = $this->db->get();
 		return $resultados->result();
 	}

@@ -17,13 +17,15 @@
                             <tbody>
                                  <?php foreach ($peticiones as $peticion){?>
                                     <tr>
-                                    <td><?php echo $peticion->ejemplar; ?></td>
+                                    <td><?php echo $peticion->ejemplar; ?>
+                                    </td>
                                     <td><?php echo $peticion->peti_fechareg;
                                     ?></td>
                                     <td><?php echo $peticion->peti_obs; ?></td>
                                     <td>
-                                    <button class="btn btn-primary btn-xs">Prestar</button>
-                                    <button class="btn btn-danger btn-xs">Rechazar</button>
+                                    <a href="<?= base_url(); ?>EditarPeticion/PrestarPeticion/<?= $id=$peticion->peti_id; ?>" class="btn btn-primary btn"> prestar</a>
+                                    
+                                    <a href="<?= base_url(); ?>EditarPeticion/EliminarPeticion/<?= $id=$peticion->peti_id; ?>" class="btn btn-danger btn"> rechazar</a>
                                 </td>
                                  </tr>
                                  <?php } ?> 

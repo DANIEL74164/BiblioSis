@@ -14,7 +14,7 @@
                               <th><i class=" fa fa-calendar"></i> FECHA FIN</th>
                               <th>Plazo</th>
                               <th><i class=" fa fa-edit"></i> OBSERVACION</th>
-                              <th><i class=" fa fa-edit"></i> OPCIONES</th>
+                              
                             </tr>
                         </thead>
                             <tbody>
@@ -28,7 +28,7 @@
                                     <td><?php echo $pres->pres_dias; ?></td>
                                     <td><?php ?></td>
                                     <td>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Ver usuario</button>
+                                    
                                 </td>
                                  </tr>
                                  <?php } ?> 

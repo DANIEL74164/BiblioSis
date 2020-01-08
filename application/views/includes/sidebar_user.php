@@ -31,7 +31,7 @@
                       </a>
                   </li>
                   <li>
-                      <a href="<?= base_url()?>LibrosPrestados">
+                      <a href="<?= base_url()?>Prestamo/GenerarPrestamos">
                           <i class="fa fa-user"></i>
                           <span>LIBROS PRESTADOS</span>
                       </a>
